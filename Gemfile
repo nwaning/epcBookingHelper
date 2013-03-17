@@ -25,7 +25,7 @@ gem 'jquery-rails'
 
 group :production do
   # Use MySQL as the production database
-  gem 'mysql'
+  gem 'mysql2'
 
   # Use unicorn as the app server
   gem 'unicorn'
