@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @connectiontype.name %>
+</p>
+
+<p>
+  <b>Bezeichnung:</b>
+  <%= @connectiontype.bezeichnung %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @connectiontype.region_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_connectiontype_path(@connectiontype) %> |
+<%= link_to 'Back', connectiontypes_path %>

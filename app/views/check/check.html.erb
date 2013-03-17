@@ -1,0 +1,32 @@
+<%= form_tag('/checkaddress') do %>
+<div style="font-family: Arial; font-size: 12px; font-weight: bold; color: #fff;">
+	<table align="center" width="460px" style="background-color: #26a12d;">
+    	<tr>
+        	<td rowspan="4"><img src="http://epcrm.wolkenpower.de/epcCheck/gfx%5CInternet.png" alt="epcan Breitband" width="130px" /></td>
+            <td><%= label_tag(:fcity, "Ort") %></td>
+            <td><%= text_field_tag(:fcity, @city) %></td>
+        </tr>
+        <tr>
+            <td style="width: 120px;"><%= label_tag(:fstreet, "Straße") %></td>
+            <td><%= text_field_tag(:fstreet, @street) %></td>
+        </tr>
+        <tr>
+                 <td style="width: 120px;"><%= label_tag(:fnr, "Hausnummer") %></td>
+                <td><%= text_field_tag(:fnr, @nr) %></td>
+        </tr>
+        <tr>
+            <td ></td>
+            <td style="text-align: left;">
+                <%= submit_tag ("Verfügbarkeit prüfen")%></td>
+    	</tr>
+	</table>
+</div>
+<%= text_field_tag(:r, @result, :disabled => true) %>
+<% end %>
+<br>
+<br>
+<div align="center">
+<% if @technik == 2 %>
+<%= link_to @html, :controller => "bookings", :action => "new", street: @street, nr: @nr, plz: @plz, ort: @city, ct: @result, region: @region %>
+<% end %>
+</div>

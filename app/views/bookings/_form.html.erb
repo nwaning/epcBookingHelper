@@ -1,0 +1,69 @@
+<%= form_for(@booking) do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% @booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nachname %><br />
+    <%= f.text_field :nachname %>
+  </div>
+  <div class="field">
+    <%= f.label :vorname %><br />
+    <%= f.text_field :vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :adresse %><br />
+    <%= f.text_field :adresse %>
+  </div>
+  <div class="field">
+    <%= f.label :hausnummer %><br />
+    <%= f.text_field :hausnummer %>
+  </div>
+  <div class="field">
+    <%= f.label :plz %><br />
+    <%= f.number_field :plz %>
+  </div>
+  <div class="field">
+    <%= f.label :ort %><br />
+    <%= f.text_field :ort %>
+  </div>
+  <div class="field">
+    <%= f.label :telefon %><br />
+    <%= f.text_field :telefon %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mobil %><br />
+    <%= f.text_field :mobil %>
+  </div>
+  <div class="field">
+    <%= f.label :geburtsdatum %><br />
+    <%= f.date_select :geburtsdatum %>
+  </div>
+  <div class="field">
+    <%= f.label :scale_id %><br />
+    <%= f.select :scale_id, Scale.where(:region_id => @region).collect {|scale| [ scale.name, scale.id ] } %>
+  </div>
+  <div class="field">
+    <%= f.label :connectiontyp_id %><br />
+    <% if @conntype == nil %>
+	<%= f.select :connectiontyp_id, Connectiontype.all.collect {|connectiontype| [ connectiontype.name, connectiontype.id ] } %>
+	<% else %>
+	<%= f.select :connectiontyp_id, Connectiontype.where(:name => @conntype).collect {|connectiontype| [ connectiontype.name, connectiontype.id ] } %>
+	<% end %>   
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

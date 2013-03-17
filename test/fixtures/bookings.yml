@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nachname: MyString
+  vorname: MyString
+  adresse: MyString
+  hausnummer: MyString
+  plz: 1
+  ort: MyString
+  telefon: MyString
+  email: MyString
+  mobil: MyString
+  geburtsdatum: 2013-02-25
+  scale_id: 1
+  connectiontyp_id: 1
+
+two:
+  nachname: MyString
+  vorname: MyString
+  adresse: MyString
+  hausnummer: MyString
+  plz: 1
+  ort: MyString
+  telefon: MyString
+  email: MyString
+  mobil: MyString
+  geburtsdatum: 2013-02-25
+  scale_id: 1
+  connectiontyp_id: 1

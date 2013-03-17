@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  street: MyString
+  nr: MyString
+  region_id: 1
+  FTTC: 1
+  FTTH: 1
+  WiMax: 1
+  Richtfunk: 1
+  istGebiet: 1
+  plz: MyString
+  ort: MyString
+
+two:
+  street: MyString
+  nr: MyString
+  region_id: 1
+  FTTC: 1
+  FTTH: 1
+  WiMax: 1
+  Richtfunk: 1
+  istGebiet: 1
+  plz: MyString
+  ort: MyString

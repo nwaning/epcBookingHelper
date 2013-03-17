@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Street:</b>
+  <%= @availability.street %>
+</p>
+
+<p>
+  <b>Nr:</b>
+  <%= @availability.nr %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @availability.region_id %>
+</p>
+
+<p>
+  <b>Fttc:</b>
+  <%= @availability.FTTC %>
+</p>
+
+<p>
+  <b>Ftth:</b>
+  <%= @availability.FTTH %>
+</p>
+
+<p>
+  <b>Wimax:</b>
+  <%= @availability.WiMax %>
+</p>
+
+<p>
+  <b>Richtfunk:</b>
+  <%= @availability.Richtfunk %>
+</p>
+
+<p>
+  <b>Istgebiet:</b>
+  <%= @availability.istGebiet %>
+</p>
+
+<p>
+  <b>Plz:</b>
+  <%= @availability.plz %>
+</p>
+
+<p>
+  <b>Ort:</b>
+  <%= @availability.ort %>
+</p>
+
+
+<%= link_to 'Edit', edit_availability_path(@availability) %> |
+<%= link_to 'Back', availabilities_path %>

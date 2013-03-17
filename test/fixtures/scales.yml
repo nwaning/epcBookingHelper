@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  bezeichnung: MyString
+  monatlich: 1.5
+  einmalig: 1.5
+  region_id: 1
+  notiz: MyString
+
+two:
+  name: MyString
+  bezeichnung: MyString
+  monatlich: 1.5
+  einmalig: 1.5
+  region_id: 1
+  notiz: MyString

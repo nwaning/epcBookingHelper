@@ -1,0 +1,29 @@
+<%= form_for(@connectiontype) do |f| %>
+  <% if @connectiontype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@connectiontype.errors.count, "error") %> prohibited this connectiontype from being saved:</h2>
+
+      <ul>
+      <% @connectiontype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :bezeichnung %><br />
+    <%= f.text_field :bezeichnung %>
+  </div>
+  <div class="field">
+    <%= f.label :region_id %><br />
+    <%= f.select :region_id, Region.all.collect {|region| [ region.name, region.id ] } %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

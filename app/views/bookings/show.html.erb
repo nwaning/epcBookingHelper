@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nachname:</b>
+  <%= @booking.nachname %>
+</p>
+
+<p>
+  <b>Vorname:</b>
+  <%= @booking.vorname %>
+</p>
+
+<p>
+  <b>Adresse:</b>
+  <%= @booking.adresse %>
+</p>
+
+<p>
+  <b>Hausnummer:</b>
+  <%= @booking.hausnummer %>
+</p>
+
+<p>
+  <b>Plz:</b>
+  <%= @booking.plz %>
+</p>
+
+<p>
+  <b>Ort:</b>
+  <%= @booking.ort %>
+</p>
+
+<p>
+  <b>Telefon:</b>
+  <%= @booking.telefon %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @booking.email %>
+</p>
+
+<p>
+  <b>Mobil:</b>
+  <%= @booking.mobil %>
+</p>
+
+<p>
+  <b>Geburtsdatum:</b>
+  <%= @booking.geburtsdatum %>
+</p>
+
+<p>
+  <b>Scale:</b>
+  <%= Scale.find_by_id(@booking.scale_id).name %>
+</p>
+
+<p>
+  <b>Connectiontyp:</b>
+  <%= Connectiontype.find_by_id(@booking.connectiontyp_id).name %>
+</p>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

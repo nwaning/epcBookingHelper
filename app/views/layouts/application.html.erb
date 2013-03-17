@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EpcBookingHelper</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<% if $loggedin == true %>
+	<%= render :partial => "admin/adminpanel" %>
+<% end %>
+</body>
+</html>
